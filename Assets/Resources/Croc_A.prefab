@@ -405,39 +405,12 @@ MonoBehaviour:
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
   m_SynchronizeParameters:
-  - Type: 4
-    SynchronizeType: 0
-    Name: RunForward
-  - Type: 4
-    SynchronizeType: 0
-    Name: RunBackward
-  - Type: 4
-    SynchronizeType: 0
-    Name: RunLeft
-  - Type: 4
-    SynchronizeType: 0
-    Name: RunRight
-  - Type: 3
-    SynchronizeType: 0
-    Name: Walk
   - Type: 9
     SynchronizeType: 2
     Name: Jump
   - Type: 9
     SynchronizeType: 0
     Name: idel
-  - Type: 1
-    SynchronizeType: 0
-    Name: Blend
-  - Type: 4
-    SynchronizeType: 0
-    Name: FallDown
-  - Type: 4
-    SynchronizeType: 0
-    Name: gethurt
-  - Type: 3
-    SynchronizeType: 0
-    Name: Back
   - Type: 1
     SynchronizeType: 2
     Name: inputH
