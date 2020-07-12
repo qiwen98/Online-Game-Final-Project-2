@@ -20,9 +20,19 @@ public class setactivefalse : MonoBehaviour
                     GameObject[i].SetActive(true);
                 }*/
                 GameObject[i].SetActive(false);
+                Invoke("setact", 60f);
             }
         }
         
+    }
+    void setact()
+    {
+        for (int i = 0; i < GameObject.Length; i++)
+        {
+
+            GameObject[i].SetActive(true);
+        }
+
     }
     // Start is called before the first frame update
     void Start()
