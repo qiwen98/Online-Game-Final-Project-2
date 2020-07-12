@@ -30,7 +30,7 @@ public class ResultState : MonoBehaviourPunCallbacks, Istate
             {
                 // Player.GetComponent<PlayerMovementController>().speed = 0;
                 Player.GetComponent<PlayerMovementController>().enabled = false;
-                Player.GetComponent<PlayerBehaviour>().enabled = false;
+               // Player.GetComponent<PlayerBehaviour>().enabled = false;
             }
 
 

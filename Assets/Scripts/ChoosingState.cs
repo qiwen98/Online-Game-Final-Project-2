@@ -64,20 +64,23 @@ public class ChoosingState : MonoBehaviourPunCallbacks, Istate
 
                 //update the round
                 PhotonNetwork.CurrentRoom.SetCustomProperties(_customroomproperties);
-
-                //reset all the local player health to 3
-                  foreach (GameObject Player in GameManager.instance.Playerslist)
-                  {
-                    /* Player.GetComponent<PhotonView>().RPC("ResetHealth",
-                                RpcTarget.AllBuffered,
-                                Player.GetComponent<PhotonView>().Owner);
-                                */
-                    // Debug.Log("Health reseted");
-                    Player.GetComponent<PhotonView>().RPC("ResetHealth",
-                               RpcTarget.AllBuffered
-                               );
-                }
+                
                   
+            }
+
+            ////reset all the local player health to 3
+            foreach (GameObject Player in GameManager.instance.Playerslist)
+            {
+                /* Player.GetComponent<PhotonView>().RPC("ResetHealth",
+                           RpcTarget.AllBuffered,
+                           Player.GetComponent<PhotonView>().Owner);
+                          */
+                Debug.Log("#Health reseted");
+
+                Player.GetComponent<PhotonView>().RPC("ResetHealth",
+                     RpcTarget.AllBuffered
+                    );
+
             }
 
 

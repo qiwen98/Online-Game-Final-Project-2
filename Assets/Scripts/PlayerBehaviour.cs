@@ -199,12 +199,16 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
     [PunRPC]
     public void ResetHealth()
     {
-        foreach(Player target in PhotonNetwork.PlayerList)
-        {
-            health = startHealth;
-            _customproperties["Health"] = health;
-            target.SetCustomProperties(_customproperties);
-        }
+        
+            if(photonView.IsMine)
+            {
+               float playerhealth = (float)PhotonNetwork.LocalPlayer.CustomProperties["Health"];
+                playerhealth = startHealth;
+                _customproperties["Health"] = playerhealth;
+              PhotonNetwork.LocalPlayer.SetCustomProperties(_customproperties);
+            }
+           
+        
         
        
     }
@@ -318,9 +322,16 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                    // Debug.Log("updatescore");
                     UpdateScore(other.gameObject, ScoreManager.instance.bigfanScore);
                 }
-               
-                
+            
+                break;
 
+            case "Bullet(Clone)":
+                //Debug.Log("collidedbullet");
+                if (other.gameObject.transform.parent != null)
+                {
+                    // Debug.Log("updatescore");
+                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                }
                 break;
         }
        
@@ -417,8 +428,8 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
             Debug.Log("is not mine");
             
             
-            if (trap.gameObject.GetComponentInParent<PhotonView>().Owner.CustomProperties["Score"] != null)
-            {
+           // if (trap.gameObject.GetComponentInParent<PhotonView>().Owner.CustomProperties["Score"] != null)
+            //{
                 // currentscore = (float)trap.gameObject.GetComponentInParent<PhotonView>().Owner.CustomProperties["Score"];
 
                 // AddScore(trapType_score, trap.gameObject.GetComponentInParent<PhotonView>().Owner);
@@ -436,11 +447,11 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 
 
                 Debug.Log(trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner+"will be awarded score");
-            }
-            else
-            {
-                Debug.LogError("Score key not initialise yet");
-            }
+            //}
+            //else
+           // {
+             //   Debug.LogError("Score key not initialise yet");
+            //}
 
 
         }
