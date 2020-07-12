@@ -71,6 +71,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
     void mute()
     {
         HealthManagerUI.instance.soundleft.SetActive(false);
+        HealthManagerUI.instance.soundleft_other.SetActive(false);
     }
     private void FixedUpdate()
     {
@@ -119,8 +120,17 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
     {
         health = (float)target.CustomProperties["Health"];
         health -= _damage;
-        HealthManagerUI.instance.soundleft.SetActive(true);
-        Invoke("mute", 2f);
+        if (photonView.IsMine)
+        {
+            HealthManagerUI.instance.soundleft.SetActive(true);
+            Invoke("mute", 2f);
+        }
+        else if (!photonView.IsMine)
+        {
+            HealthManagerUI.instance.soundleft_other.SetActive(true);
+            Invoke("mute", 2f);
+        }
+
         if (target.IsLocal)
         {
             HealthManagerUI.instance.anim.SetTrigger("LowHealth");

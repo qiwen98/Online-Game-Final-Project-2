@@ -12,6 +12,7 @@ public class HealthManagerUI : MonoBehaviour
     private int healthNum=3;
     public Animator anim;
     public GameObject soundleft;
+    public GameObject soundleft_other;
     private void Awake()
     {
         if (instance != null)
