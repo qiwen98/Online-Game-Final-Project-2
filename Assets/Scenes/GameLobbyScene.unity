@@ -5479,7 +5479,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 98e123e947146b34ebb2a6072aa54a24, type: 3}
-    m_FontSize: 150
+    m_FontSize: 122
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5490,7 +5490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Name
+  m_Text: "TrickY JourneY\r\n"
 --- !u!114 &333943637060570200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5567,7 +5567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1563946716029801760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8156,7 +8156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6587877006275484318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8232,7 +8232,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 98e123e947146b34ebb2a6072aa54a24, type: 3}
-    m_FontSize: 72
+    m_FontSize: 62
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8243,7 +8243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Name
+  m_Text: "TrickY JourneY\r\n"
 --- !u!114 &6587877007269778780
 MonoBehaviour:
   m_ObjectHideFlags: 0
