@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7e25077918b80924ba3421c0876caac5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KG Second Chances Sketch
+  fontNames:
+  - KG Second Chances Sketch
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b4b274a8b186de64b96f3fa4d656cb6e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

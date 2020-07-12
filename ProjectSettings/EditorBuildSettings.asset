@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameLobbyScene.unity
+    guid: a8854f00a1a33864c862710c887ea381
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: 133cb7239c658594aae12c9aa59c5556
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 74aec65d560ae904db7e76ad6d71ad5b
+  - enabled: 1
+    path: Assets/Scenes/Level_ice.unity
+    guid: f00a8c1df581c4b45be7648e5a2f0d5a
+  - enabled: 1
+    path: Assets/Scenes/Level_Jungle.unity
+    guid: 14dcd64610e4d4a47b0fafe599cc1488
+  - enabled: 1
+    path: Assets/Scenes/Level_Pond.unity
+    guid: 52da976db169d6d42b581902053e5e65
+  - enabled: 1
+    path: Assets/Scenes/Level_OceanLand.unity
+    guid: ae52d7227bca4ff41bc0ed6d1ca3114e
+  - enabled: 1
+    path: Assets/Scenes/Level_Desert.unity
+    guid: 9210bdf4ee543aa4fa450664d88ca57b
+  - enabled: 1
+    path: Assets/Scenes/Level_Volcano.unity
+    guid: f7532e532a9def347a696a1e4bad60af
+  m_configObjects: {}
