@@ -10,8 +10,8 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 {
    
     public float destination_objective_point = 20;
-    public float bigfanScore=10;
-    public float gunScore=20;
+    public float bigfanScore=5;
+    public float gunScore=5;
     public float pushscore=5;
     public float current_sequence = 0;
     public int scoreLimit = 100;

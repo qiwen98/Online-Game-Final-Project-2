@@ -8983,8 +8983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination_objective_point: 20
-  bigfanScore: 10
-  gunScore: 20
+  bigfanScore: 5
+  gunScore: 5
   pushscore: 5
   current_sequence: 0
   scoreLimit: 100
