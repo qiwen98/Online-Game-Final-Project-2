@@ -252,19 +252,6 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
         Debug.Log("collided" + other.gameObject.tag +"and with name" +other.gameObject.name);
         switch (other.gameObject.tag)
         {
-            case "BigFan":
-
-                //UpdateScore(other.gameObject, ScoreManager.instance.bigfanScore);
-                //photonView.RPC("UpdateScore", RpcTarget.AllBuffered, other.gameObject, ScoreManager.instance.bigfanScore);//1
-               
-                break;
-                
-
-            case "Gun":
-               // UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                
-                break;
-
             case "TrapForChoose":
 
                 if(!ChoosenTrap)
@@ -298,17 +285,6 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 break;
 
             case "bullet":
-                if (photonView.IsMine)
-                {
-                    //Debug.Log("Bullet is true");
-                    // UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                    
-
-                    photonView.RPC("TakeDamage",
-                                    RpcTarget.AllBuffered,
-                                    1f, PhotonNetwork.LocalPlayer);
-
-                }
 
                 break;
         }
@@ -332,6 +308,19 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                     // Debug.Log("updatescore");
                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                 }
+
+                if (photonView.IsMine)
+                {
+                    //Debug.Log("Bullet is true");
+                    // UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+
+
+                    photonView.RPC("TakeDamage",
+                                    RpcTarget.AllBuffered,
+                                    1f, PhotonNetwork.LocalPlayer);
+
+                }
+
                 break;
         }
        
