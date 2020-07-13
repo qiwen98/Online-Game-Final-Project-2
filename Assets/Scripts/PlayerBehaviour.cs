@@ -329,10 +329,16 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 Debug.Log("^collidedbullet");
                  if (other.gameObject.transform.parent != null)
                  {
-                     // Debug.Log("updatescore");
-                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                    // Debug.Log("updatescore");
+                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                   
+                    if (!other.gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
+                    {
+                        TakeDamage(1f, PhotonNetwork.LocalPlayer);
+                    }
+                   
                  }
-
+                 
                
 
                 break;
