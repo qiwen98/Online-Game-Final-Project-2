@@ -6707,7 +6707,7 @@ MonoBehaviour:
   - {fileID: 147760, guid: 54505f844549dae4da49d1efc5b04ffc, type: 3}
   - {fileID: 112028, guid: 7d098ba33acf485428c1097806e12efd, type: 3}
   - {fileID: 133498, guid: 87afe65a1cb6d91448dc19955789f0a2, type: 3}
-  BattleState_TimerLimit: 60
+  BattleState_TimerLimit: 300
   roundlimit: 4
   ResultState_TimerLimit: 15
 --- !u!114 &178629312
