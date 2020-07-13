@@ -434,7 +434,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
             
 
         }
-        else if (trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner.ActorNumber!=PhotonNetwork.LocalPlayer.ActorNumber&&iswritten)
+        else if (trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner.ActorNumber!=PhotonNetwork.LocalPlayer.ActorNumber)
         {
             Debug.Log("^is not mine");
             
