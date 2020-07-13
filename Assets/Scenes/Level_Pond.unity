@@ -22698,6 +22698,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3886332735399422356, guid: e6262ef21059578448a43b1edd66cdff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3886332735399422361, guid: e6262ef21059578448a43b1edd66cdff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39181,7 +39186,7 @@ BoxCollider:
   m_GameObject: {fileID: 1754332962}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 20, y: 11.61643, z: 4.3055167}
   m_Center: {x: 0, y: 3.808214, z: -0.074891485}
