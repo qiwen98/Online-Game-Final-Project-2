@@ -40,7 +40,7 @@ public class PlayerSetup : MonoBehaviourPunCallbacks
     {
         if (playerNameText != null)
         {
-            playerNameText.text = PhotonNetwork.LocalPlayer.NickName;
+            playerNameText.text = photonView.Owner.NickName;
         }
     }
 }
