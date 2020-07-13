@@ -303,7 +303,11 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                                     1f, PhotonNetwork.LocalPlayer);
 
                     //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-
+                }
+                if (other.gameObject.transform.parent != null)
+                {
+                     Debug.Log("update score of bullet");
+                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                 }
                 break;
         }
@@ -322,11 +326,11 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
 
             case "Bullet(Clone)":
                 //Debug.Log("collidedbullet");
-                if (other.gameObject.transform.parent != null)
+               /* if (other.gameObject.transform.parent != null)
                 {
                     // Debug.Log("updatescore");
                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                }
+                }*/
 
 
 
