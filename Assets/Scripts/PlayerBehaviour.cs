@@ -293,17 +293,23 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                                    1f, PhotonNetwork.LocalPlayer);
 
                 }
-
-
                 break;
 
             case "bullet":
-               
-                if (other.gameObject.transform.parent != null)
+                if (photonView.IsMine && !getpushed)
                 {
-                     Debug.Log("update score of bullet");
-                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                    //Debug.Log("Bullet is true");
+                    photonView.RPC("TakeDamage",
+                                    RpcTarget.AllBuffered,
+                                    1f, PhotonNetwork.LocalPlayer);
+
+                    //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                 }
+                /* if (other.gameObject.transform.parent != null)
+                 {
+                      Debug.Log("update score of bullet");
+                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                 }*/
                 break;
         }
 
@@ -327,15 +333,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                      UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                  }*/
 
-                if (photonView.IsMine && !getpushed)
-                {
-                    //Debug.Log("Bullet is true");
-                    photonView.RPC("TakeDamage",
-                                    RpcTarget.AllBuffered,
-                                    1f, PhotonNetwork.LocalPlayer);
-
-                    //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                }
+               
 
                 break;
         }
