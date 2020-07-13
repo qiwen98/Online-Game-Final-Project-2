@@ -120,12 +120,13 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
     {
 
         health = (float)target.CustomProperties["Health"];
+        health -= _damage;
         if (photonView.IsMine)
         {
             
             HealthManagerUI.instance.soundleft.SetActive(true);
             Invoke("mute", 2f);
-            health -= _damage;
+            
         }
         else if (!photonView.IsMine)
         {
