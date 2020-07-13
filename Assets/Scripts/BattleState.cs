@@ -187,9 +187,9 @@ public class BattleState : MonoBehaviourPunCallbacks,Istate
                     Debug.Log("reach destination");
                     //record player reached destination
                     if(Player.GetComponent<PlayerBehaviour>().reach_destination==false && Player.GetComponent<PhotonView>().IsMine)
-                    {  
-                       
+                    {
 
+                        Player.GetComponent<PlayerBehaviour>().reach_destination = true;
 
                         //determine the player sequence
                         int current_sequence=(int) PhotonNetwork.CurrentRoom.CustomProperties["Global_destination_Var"];
@@ -255,6 +255,23 @@ public class BattleState : MonoBehaviourPunCallbacks,Istate
 
                     {
                         LostCallBack();
+                        BattleState_Timer = 0;
+                    }
+
+                    int deathpeople=(int)PhotonNetwork.CurrentRoom.CustomProperties["Global_death_quantity"];
+                    int reachdestination=(int)PhotonNetwork.CurrentRoom.CustomProperties["Global_destination_Var"];
+
+                    if (deathpeople+reachdestination>= PhotonNetwork.PlayerList.Length&&
+                        (int)PhotonNetwork.CurrentRoom.CustomProperties["Round"] < roundlimit)
+                    {
+                        LostCallBack();
+                        BattleState_Timer = 0;
+                    }
+
+                    if (deathpeople + reachdestination >= PhotonNetwork.PlayerList.Length &&
+                       (int)PhotonNetwork.CurrentRoom.CustomProperties["Round"] >= roundlimit)
+                    {
+                        WinCallBack();
                         BattleState_Timer = 0;
                     }
                 }
