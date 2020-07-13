@@ -14577,6 +14577,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 7.2644
       objectReference: {fileID: 0}
+    - target: {fileID: 1953184644644758197, guid: 1b5fde073a7bedc42842b1cc03a6842a,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953184644644758197, guid: 1b5fde073a7bedc42842b1cc03a6842a,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9150943
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953184644644758197, guid: 1b5fde073a7bedc42842b1cc03a6842a,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9150943
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5fde073a7bedc42842b1cc03a6842a, type: 3}
 --- !u!1001 &441487251
@@ -45659,7 +45674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114273326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.6, y: 53.45, z: 76.9}
+  m_LocalPosition: {x: -34.14, y: 53.45, z: 70.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 677232732}
@@ -58434,6 +58449,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401121131}
   m_CullTransparentMesh: 0
+--- !u!1001 &1401669492
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1941349881}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_Name
+      value: jungle cliff B (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.016778288
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.08171532
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.60779005
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.789704
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_RootMapOrder
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.59716123
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5976637
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5962232
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -175.823
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 171.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 105.147995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+      propertyPath: m_LightmapParameters
+      value: 
+      objectReference: {fileID: 15201, guid: 0000000000000000f000000000000000, type: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47415c73507b27c4faa49c979df14002, type: 3}
+--- !u!4 &1401669493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 47415c73507b27c4faa49c979df14002,
+    type: 3}
+  m_PrefabInstance: {fileID: 1401669492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1401976200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58795,7 +58901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417438672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 32.5, z: 79.31}
+  m_LocalPosition: {x: -12.42, y: 32.5, z: 79.31}
   m_LocalScale: {x: 0.9214525, y: 0.09214525, z: 0.9214525}
   m_Children: []
   m_Father: {fileID: 677232732}
@@ -79595,6 +79701,7 @@ Transform:
   - {fileID: 1157194156}
   - {fileID: 333136809}
   - {fileID: 808223274}
+  - {fileID: 1401669493}
   m_Father: {fileID: 1729293936}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -103.715996, y: 109.079994, z: -141.044}

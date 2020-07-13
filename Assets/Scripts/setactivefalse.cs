@@ -20,7 +20,7 @@ public class setactivefalse : MonoBehaviour
                     GameObject[i].SetActive(true);
                 }*/
                 GameObject[i].SetActive(false);
-                Invoke("setact", 60f);
+                Invoke("setact",30f);
             }
         }
         
