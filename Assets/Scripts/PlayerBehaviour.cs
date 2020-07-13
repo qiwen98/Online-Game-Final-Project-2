@@ -330,13 +330,11 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                  if (other.gameObject.transform.parent != null)
                  {
                     // Debug.Log("updatescore");
-                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                    if(!other.gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
-                    {
+                 
                         photonView.RPC("TakeDamage",
                                     RpcTarget.AllBuffered,
                                     1f, PhotonNetwork.LocalPlayer);
-                    }
+                    
                    
                  }
                  
