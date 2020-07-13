@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15912056, g: 0.18605006, b: 0.17657939, a: 1}
+  m_IndirectSpecularColor: {r: 0.15912053, g: 0.18605006, b: 0.17657939, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6670,21 +6670,25 @@ MonoBehaviour:
   ChoosespawnLocation: {fileID: 1941287905}
   ChooseState_Players_spawnLocation: {fileID: 1382877593}
   traps_available_for_player:
-  - {fileID: 3291769366055320034, guid: e8e5614434b93c344a4399ee0a7bed70, type: 3}
-  - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
+  - {fileID: 1897794718411832, guid: 68103fef608e730429d5b20342dec020, type: 3}
+  - {fileID: 205952538903718312, guid: 7ab7d918ae168114c8eb0f4af90a7636, type: 3}
+  - {fileID: 1897794718411832, guid: 68103fef608e730429d5b20342dec020, type: 3}
+  - {fileID: 580883686353382687, guid: f8fbe158fc2278c41a2e46e65452c931, type: 3}
+  - {fileID: 1897794718411832, guid: 68103fef608e730429d5b20342dec020, type: 3}
+  - {fileID: 1538086207738409604, guid: 59edf79907abcd84bb6062baa6c60070, type: 3}
   - {fileID: 4341174075188769281, guid: 40cca0131d173234fa8d921f7c22259c, type: 3}
+  - {fileID: 1897794718411832, guid: 68103fef608e730429d5b20342dec020, type: 3}
+  - {fileID: 1897794718411832, guid: 68103fef608e730429d5b20342dec020, type: 3}
+  - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
+  - {fileID: 580883686353382687, guid: f8fbe158fc2278c41a2e46e65452c931, type: 3}
+  - {fileID: 205952538903718312, guid: 7ab7d918ae168114c8eb0f4af90a7636, type: 3}
+  - {fileID: 205952538903718312, guid: 7ab7d918ae168114c8eb0f4af90a7636, type: 3}
+  - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
   - {fileID: 1538086207738409604, guid: 59edf79907abcd84bb6062baa6c60070, type: 3}
   - {fileID: 519078030157060514, guid: 955b9dcc6178ed248a5784368d21347e, type: 3}
-  - {fileID: 580883686353382687, guid: f8fbe158fc2278c41a2e46e65452c931, type: 3}
-  - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
-  - {fileID: 3291769366055320034, guid: e8e5614434b93c344a4399ee0a7bed70, type: 3}
-  - {fileID: 4341174075188769281, guid: 40cca0131d173234fa8d921f7c22259c, type: 3}
-  - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
-  - {fileID: 580883686353382687, guid: f8fbe158fc2278c41a2e46e65452c931, type: 3}
+  - {fileID: 519078030157060514, guid: 955b9dcc6178ed248a5784368d21347e, type: 3}
   - {fileID: 1538086207738409604, guid: 59edf79907abcd84bb6062baa6c60070, type: 3}
-  - {fileID: 4341174075188769281, guid: 40cca0131d173234fa8d921f7c22259c, type: 3}
   - {fileID: 6172013567999431123, guid: 1e2cdfe3161643e42a24e3c512c1390d, type: 3}
-  - {fileID: 1041665156121195466, guid: d52766d72a6b12f4d92af08e212ccc00, type: 3}
   - {fileID: 519078030157060514, guid: 955b9dcc6178ed248a5784368d21347e, type: 3}
   ChooseStateTimeLimit: 20
   spawnLocation: {fileID: 1334844764}
