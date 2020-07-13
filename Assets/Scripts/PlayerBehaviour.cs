@@ -298,7 +298,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 break;
 
             case "bullet":
-                if (other == photonView.IsMine)
+                if (photonView.IsMine && !getpushed)
                 {
                     //Debug.Log("Bullet is true");
                     photonView.RPC("TakeDamage",
