@@ -118,10 +118,11 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
     [PunRPC]
     public void TakeDamage(float _damage, Player target)
     {
-        health = (float)target.CustomProperties["Health"];
+       
         
         if (photonView.IsMine)
         {
+            health = (float)target.CustomProperties["Health"];
             HealthManagerUI.instance.soundleft.SetActive(true);
             Invoke("mute", 2f);
             health -= _damage;
@@ -130,6 +131,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
         {
             HealthManagerUI.instance.soundleft_other.SetActive(true);
             Invoke("mute", 2f);
+            health += _damage;
         }
 
         if (target.IsLocal)
