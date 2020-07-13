@@ -299,9 +299,9 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 if (photonView.IsMine && !getpushed)
                 {
                     //Debug.Log("Bullet is true");
-                    photonView.RPC("TakeDamage",
+                  /*  photonView.RPC("TakeDamage",
                                     RpcTarget.AllBuffered,
-                                    1f, PhotonNetwork.LocalPlayer);
+                                    1f, PhotonNetwork.LocalPlayer);*/
 
                     //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                 }
@@ -326,12 +326,12 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 break;
 
            case "Bullet(Clone)":
-                //Debug.Log("collidedbullet");
-                /* if (other.gameObject.transform.parent != null)
+                Debug.Log("^collidedbullet");
+                 if (other.gameObject.transform.parent != null)
                  {
                      // Debug.Log("updatescore");
                      UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                 }*/
+                 }
 
                
 
@@ -421,14 +421,14 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
         if (trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner== PhotonNetwork.LocalPlayer)
         {
            
-            Debug.Log("my trap"+trap.gameObject.transform.parent.name);
+            Debug.Log("^my trap"+trap.gameObject.transform.parent.name);
             
             
 
         }
         else if (trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner.ActorNumber!=PhotonNetwork.LocalPlayer.ActorNumber)
         {
-            Debug.Log("is not mine");
+            Debug.Log("^is not mine");
             
             
            // if (trap.gameObject.GetComponentInParent<PhotonView>().Owner.CustomProperties["Score"] != null)
