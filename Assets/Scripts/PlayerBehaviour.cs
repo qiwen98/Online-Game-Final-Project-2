@@ -261,8 +261,8 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-
-        Debug.Log("collided" + other.gameObject.tag +"and with name" +other.gameObject.name);
+        Debug.Log("is here");
+       // Debug.Log("collided" + other.gameObject.tag +"and with name" +other.gameObject.name);
         switch (other.gameObject.tag)
         {
             case "TrapForChoose":
@@ -298,15 +298,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 break;
 
             case "bullet":
-                if (photonView.IsMine && !getpushed)
-                {
-                    //Debug.Log("Bullet is true");
-                    photonView.RPC("TakeDamage",
-                                    RpcTarget.AllBuffered,
-                                    1f, PhotonNetwork.LocalPlayer);
-
-                    //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                }
+               
                 if (other.gameObject.transform.parent != null)
                 {
                      Debug.Log("update score of bullet");
@@ -327,15 +319,23 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
             
                 break;
 
-            case "Bullet(Clone)":
+           case "Bullet(Clone)":
                 //Debug.Log("collidedbullet");
-               /* if (other.gameObject.transform.parent != null)
+                /* if (other.gameObject.transform.parent != null)
+                 {
+                     // Debug.Log("updatescore");
+                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                 }*/
+
+                if (photonView.IsMine && !getpushed)
                 {
-                    // Debug.Log("updatescore");
-                    UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
-                }*/
+                    //Debug.Log("Bullet is true");
+                    photonView.RPC("TakeDamage",
+                                    RpcTarget.AllBuffered,
+                                    1f, PhotonNetwork.LocalPlayer);
 
-
+                    //UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
+                }
 
                 break;
         }
