@@ -333,7 +333,9 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                     UpdateScore(other.gameObject, ScoreManager.instance.gunScore);
                     if(!other.gameObject.transform.parent.GetComponent<PhotonView>().IsMine)
                     {
-                        TakeDamage(1f, PhotonNetwork.LocalPlayer);
+                        photonView.RPC("TakeDamage",
+                                    RpcTarget.AllBuffered,
+                                    1f, PhotonNetwork.LocalPlayer);
                     }
                    
                  }
@@ -423,7 +425,7 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
 
     void UpdateScore(GameObject trap, float trapType_score)
     {
-        bool iswritten = false;
+       
         if (trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner== PhotonNetwork.LocalPlayer)
         {
            
@@ -444,15 +446,16 @@ public class PlayerBehaviour : MonoBehaviourPunCallbacks
                 // AddScore(trapType_score, trap.gameObject.GetComponentInParent<PhotonView>().Owner);
                 //  Debug.Log(" second set score success");
 
-                if(photonView.IsMine&&iswritten==false)
+                if(photonView.IsMine)
                 {
                     photonView.RPC("AddScore",
                               RpcTarget.AllBuffered,
                              trapType_score,
-                             trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner);
-                }
+                              PhotonNetwork.LocalPlayer);
+                //  trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner);
+            }
 
-              iswritten = true;
+           
                 
 
                 Debug.Log(trap.gameObject.transform.parent.GetComponent<PhotonView>().Owner+"will be awarded score");
