@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject CoverPage;
+    public GameObject LoginPage;
 
     [Header("Rules Panel")]
     public GameObject RulesUIPanel;
@@ -17,13 +19,20 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CoverPage.SetActive(true);
+        LoginPage.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void GoToLoginPage()
+    {
+        CoverPage.SetActive(false);
+        LoginPage.SetActive(true);
     }
 
     public void GoToRulePage()
