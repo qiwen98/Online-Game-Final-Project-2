@@ -134,13 +134,44 @@ public class PlayerMovementController : MonoBehaviour
         //Apply rotation 
         RotateCamera(_cameraUpDownRotation);
 
+        //jump
+        Vector3 verticalTargetPosition = rb.position;
+
+        if (Input.GetButtonDown("Jump") && Time.time > canJump)
+        {
+            gravity = 0;
+
+            //gravity = -35;//-35;
+            Physics.gravity = new Vector3(0, gravity, 0);
+            //  Physics.gravity.false;
+            verticalTargetPosition.y = Mathf.Sin(Mathf.PI) * jumpHeight;
+            canJump = Time.time + timeBeforeNextJump;
+            rb.velocity += new Vector3(0, 5, 0);
+            rb.AddForce(0, jumpForce, 0);
+            //Physics.gravity = new Vector3(0, gravity, 0);
+
+            //anim.SetTrigger("falldown");
+            Invoke("fall", 0.3f);
+            //anim.SetTrigger("TurnLeft");
+            //anim.SetTrigger("Jump");
+            // anim.SetTrigger("falldown");
+            // Jump();
+            anim.SetBool("Jump", true);
+            m_Jumping = true;
+        }
+        else
+        {
+            anim.SetBool("Jump", false);
+        }
+
+
     }
 
     //runs per physics iteration
     private void FixedUpdate()
     {       //Calculate movement velocity as a 3D vector
 
-        Vector3 verticalTargetPosition = rb.position;
+        
 
 
         if (velocity != Vector3.zero)
@@ -186,33 +217,6 @@ public class PlayerMovementController : MonoBehaviour
                 ocean_sound.SetActive(false);
             if (MenuController.instance.level == 5)
                 volcano_sound.SetActive(false);
-        }
-
-        if (Input.GetButtonDown("Jump") && Time.time > canJump)
-        {
-            gravity = 0;
-
-            //gravity = -35;//-35;
-            Physics.gravity = new Vector3(0, gravity, 0);
-            //  Physics.gravity.false;
-            verticalTargetPosition.y = Mathf.Sin(Mathf.PI) * jumpHeight;
-            canJump = Time.time + timeBeforeNextJump;
-            rb.velocity += new Vector3(0, 5, 0);
-            rb.AddForce(0, jumpForce, 0);
-            //Physics.gravity = new Vector3(0, gravity, 0);
-
-            //anim.SetTrigger("falldown");
-            Invoke("fall", 0.3f);
-            //anim.SetTrigger("TurnLeft");
-            //anim.SetTrigger("Jump");
-            // anim.SetTrigger("falldown");
-            // Jump();
-            anim.SetBool("Jump", true);
-            m_Jumping = true;
-        }
-        else
-        {
-            anim.SetBool("Jump", false);
         }
 
        
