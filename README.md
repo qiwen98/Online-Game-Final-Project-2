@@ -1,4 +1,5 @@
 # Online-Game-Final-Project-2
+This is a fully workable online game created in unity using the "Photon" framework.
 
 ## This project is done in Unity with c# 
 
